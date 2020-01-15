@@ -1,6 +1,7 @@
-require "top_female_athletes/version"
+require_relative "./top_female_athletes/version"
+require_relative "./top_female_athletes/cli"
 
-module TopFemaleAthletes
-  class Error < StandardError; end
+# module TopFemaleAthletes
+  # class Error < StandardError; end
   # Your code goes here...
-end
+# end
