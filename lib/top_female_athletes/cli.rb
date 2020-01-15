@@ -11,7 +11,7 @@ class TopFemaleAthletes::CLI
   
   def athletes_list
 
-    puts "Athlete list"
+    # puts "Athlete list"
     @athlete_list = TopFemaleAthletes::Athlete_List.list 
   end 
   
