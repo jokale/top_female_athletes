@@ -3,9 +3,9 @@
 class TopFemaleAthletes::CLI 
   
   def call 
-  
-    athlete_list
+  athlete_list
     start 
+    goodbye
   end  
   
   def athlete_list
@@ -14,10 +14,11 @@ class TopFemaleAthletes::CLI
   end 
   
   def start
-    puts "Enter the index number of the athlete you want to learn more about or type exit to enter"
+   
     
+    input = nil 
     while input!= "exit"
-    
+     puts "Enter the index number of the athlete you want to learn more about or type list to see list of the athlete or type exit to enter"
     input = gets.strip.downcase
     case input 
     when "1"
@@ -27,4 +28,10 @@ class TopFemaleAthletes::CLI
        end 
      end 
   end 
+  
+  def goodbye
+    puts "goodbye have a nice day!"
+  end 
+  
+end 
   
