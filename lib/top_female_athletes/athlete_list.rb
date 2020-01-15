@@ -1,4 +1,4 @@
-class TopAthletes::Athlete_List 
+class TopFemaleAthletes::Athlete_List 
   
   
   def self.list
