@@ -4,14 +4,15 @@ class TopFemaleAthletes::CLI
   
   def call      
     puts "Top Female Athletes!"
-  athlete_list
+  athletes_list
     start 
     goodbye
   end  
   
-  def athlete_list
+  def athletes_list
 
     puts "Athlete list"
+    @athlete_list = TopFemaleAthletes::Athlete_List.list 
   end 
   
   def start
@@ -27,7 +28,9 @@ class TopFemaleAthletes::CLI
       when "2"
         puts "More information on Athlete 2"
         when "list"
-          puts athlete_list
+          puts athletes_list
+        else 
+          puts "Not sure what you want, type list or exit"
        end 
      end 
   end 
