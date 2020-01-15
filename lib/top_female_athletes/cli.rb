@@ -2,14 +2,15 @@
 
 class TopFemaleAthletes::CLI 
   
-  def call 
+  def call      
+    puts "Top Female Athletes!"
   athlete_list
     start 
     goodbye
   end  
   
   def athlete_list
-      puts "Top Female Athletes!"
+
     puts "Athlete list"
   end 
   
@@ -25,6 +26,8 @@ class TopFemaleAthletes::CLI
       puts "More information on Athlete..."
       when "2"
         puts "More information on Athlete 2"
+        when "list"
+          puts athlete_list
        end 
      end 
   end 
