@@ -22,6 +22,9 @@ class TopFemaleAthletes::CLI
     while input!= "exit"
      puts "Enter the index number of the athlete you want to learn more about or type list to see list of the athlete or type exit to enter"
     input = gets.strip.downcase
+    
+    if input.to_i > 0 
+      puts @athlete_list[input.to_i-1]
     case input 
     when "1"
       puts "More information on Athlete..."
