@@ -15,5 +15,9 @@ class TopFemaleAthletes::Athlete_List
     @athletes
   end 
   
+  def self.scrape_bi
+    doc = Nokogiri::HTML(open("https://www.businessinsider.com/iconic-female-athletes-women-sports-2019-7?r=US&IR=T"))
+  end 
+  
   
 end 
