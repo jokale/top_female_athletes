@@ -1,6 +1,6 @@
 class TopFemaleAthletes::Athlete_List 
   
-  attr_accessor :name, :description
+  attr_accessor :name, :description, :url 
   
   def self.list
     puts "Athlete list"
@@ -8,27 +8,23 @@ class TopFemaleAthletes::Athlete_List
   end 
   
   def self.scrape_athlete
-    @athletes = []
+    athletes = []
     
-    @athletes << self.scrape_bi 
+    athletes << self.scrape_bi 
     
-    @athletes
+    athletes
   end 
   
   def self.scrape_bi
     page = Nokogiri::HTML(open("https://www.businessinsider.com/iconic-female-athletes-women-sports-2019-7?r=US&IR=T"))
-    page.css(".slide-title-text").each_with_index  do  |top_female_athletes, index|
+  
+     athlete_list = self.new 
     
-    athlete_list = self.new 
-    
-    athlete_list.name = name = page.css(".slide-title-text")[index].text.strip
+    athlete_list.name = page.css(".slide-title-text")[index].text.strip
     athlete_list.description = page.css("div.slide-layout.clearfix p")[index].text
+    athlete_list.url = "https://www.businessinsider.com/iconic-female-athletes-women-sports-2019-7?r=US&IR=T"
      
-    # athlete_list.name = doc.search(".slide-title-text").text
-    # athlete_list.description = doc.search("div.slide-layout.clearfix p").text
-    
-    # page.css("div.slide-layout.clearfix p")[index].text
-  end 
+     end 
   
   
 end 
