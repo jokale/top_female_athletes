@@ -25,13 +25,13 @@ class TopFemaleAthletes::CLI
     
     if input.to_i > 0 
       puts @athlete_list[input.to_i-1]
-    case input 
-    when "1"
-      puts "More information on Athlete..."
-      when "2"
-        puts "More information on Athlete 2"
-        when "list"
-          puts athletes_list
+    # case input 
+    # when "1"
+    #   puts "More information on Athlete..."
+    #   when "2"
+    #     puts "More information on Athlete 2"
+    #     when "list"
+    #       puts athletes_list
         else 
           puts "Not sure what you want, type list or exit"
        end 
@@ -43,4 +43,4 @@ class TopFemaleAthletes::CLI
   end 
   
 end 
- end  
+  
