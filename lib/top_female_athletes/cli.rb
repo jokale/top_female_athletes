@@ -30,13 +30,14 @@ class TopFemaleAthletes::CLI
     #   puts "More information on Athlete..."
     #   when "2"
     #     puts "More information on Athlete 2"
-    #     when "list"
-    #       puts athletes_list
+        if input == "list"
+          puts athletes_list
         else 
           puts "Not sure what you want, type list or exit"
        end 
      end 
   end 
+end 
   
   def goodbye
     puts "goodbye have a nice day!"
