@@ -16,20 +16,18 @@ class TopFemaleAthletes::Athlete_List
     athletes
   end 
   
-  def self.scrape_bi
+  def self.scrape_bi 
     doc = Nokogiri::HTML(open("https://www.businessinsider.com/iconic-female-athletes-women-sports-2019-7?r=US&IR=T"))
     
-    binding.pry 
+
   
      athlete_list = self.new 
    
-    name = doc.search("h2.slide-title-text").text
+    athlete_list.name = doc.search("h2.slide-title-text").text
     
-    description = doc.search("div.slide-layout.clearfix p").text
+    athlete_list.description = doc.search("div.slide-layout.clearfix p").text
     
-    # athlete_list.name = page.css(".slide-title-text").text.strip
-    # athlete_list.description = page.css("div.slide-layout.clearfix p").text
-    # athlete_list.url = "https://www.businessinsider.com/iconic-female-athletes-women-sports-2019-7?r=US&IR=T"
+
      
      end 
   
